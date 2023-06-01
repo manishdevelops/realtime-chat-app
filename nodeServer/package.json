@@ -4,11 +4,13 @@
   "description": "This is a node server for our iChat application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+		"dev": "nodemon index.js"
   },
   "author": "manish",
   "license": "ISC",
   "dependencies": {
+    "nodemon": "^2.0.22",
     "socket.io": "^4.6.2"
   }
 }
