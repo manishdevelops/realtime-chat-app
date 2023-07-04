@@ -1,9 +1,10 @@
+import { io } from 'socket.io-client';
+
 const socket = io('http://localhost:3000');
 
 const form = document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp');
 const messageContainer = document.querySelector('.container');
-const audio = new Audio('./ting.mp3');
 
 const append = (message, position) => {
 	const messageElement = document.createElement('div');

@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-		"dev": "nodemon index.js"
+    "dev": "nodemon index.js"
   },
   "author": "manish",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "http": "^0.0.1-security",
     "nodemon": "^2.0.22",
     "socket.io": "^4.6.2"
   }
