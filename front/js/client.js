@@ -1,6 +1,10 @@
 import { io } from 'socket.io-client';
 
-const socket = io('http://localhost:3000');
+const url =
+	process.env.NODE_ENV === 'development'
+		? `http://localhost:3000`
+		: `https://chat-backend-87q4.onrender.com`;
+const socket = io(url);
 
 const form = document.getElementById('send-container');
 const messageInp = document.getElementById('messageInp');
@@ -12,7 +16,7 @@ const append = (message, position) => {
 	messageElement.classList.add('message');
 	messageElement.classList.add(position);
 	messageContainer.append(messageElement);
-	if (position === 'left') audio.play();
+	// if (position === 'left') audio.play();
 };
 
 form.addEventListener('submit', (e) => {
